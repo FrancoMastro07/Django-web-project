@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from services.models import Service
+from .models import Service
 
 def services(request):
     services = Service.objects.all()

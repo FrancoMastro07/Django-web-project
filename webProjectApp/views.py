@@ -6,9 +6,6 @@ def home(request):
 def store(request):
     return render(request, "webProjectApp/store.html")
 
-def blog(request):
-    return render(request, "webProjectApp/blog.html")
-
 def contact(request):
     return render(request, "webProjectApp/contact.html")
 
