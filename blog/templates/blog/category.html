@@ -20,7 +20,7 @@
 
             {% endif %}
 
-              <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
               <h2 class="section-heading mb-4" >
                 <span class="section-heading-lower">{{post.title}}</span>
                 <span class="section-heading-upper">{{post.content}}</span>
@@ -40,13 +40,13 @@
     <section>
       <div style="width: 75%; margin: auto; text-align: center; color: white;">
       
-        Categories:
+        categories:
 
           {% for post in posts %}
 
             {% for category in post.categories.all %}
 
-                <a href="{% url 'Category' category.id %}" class="linksCategories">{{category.name}}</a> &nbsp;&nbsp;&nbsp;
+              {{category.name}} &nbsp;&nbsp;&nbsp;
 
             {% endfor %}
           
