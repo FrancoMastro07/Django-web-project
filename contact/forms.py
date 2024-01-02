@@ -1,0 +1,7 @@
+from django import forms
+
+class ContactForm(forms.Form):
+    
+    name = forms.CharField(label="Name", required=True)
+    email = forms.CharField(label="Email", required=True)
+    contact = forms.CharField(label="Contact", required=True)
