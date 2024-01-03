@@ -279,16 +279,12 @@ ul.errorlist{
 }
 
 .linksCategories{
-
   color: white !important;
   text-decoration: underline;
-
 }
 
 .linksCategories:hover{
-
   text-decoration: none;
-
 }
 
 .formContainer{
