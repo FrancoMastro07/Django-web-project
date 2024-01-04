@@ -21,4 +21,11 @@ class Product(models.Model):
     categories = models.ForeignKey(ProdCategory, on_delete=models.CASCADE)
     image = models.ImageField(upload_to="store", null=True, blank=True)
     price = models.FloatField()
-    availability = models.BooleanField()
+    availability = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
