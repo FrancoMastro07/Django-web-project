@@ -15,7 +15,7 @@ class Cart:
         self.session["cart"] = self.cart
         self.session.modified = True
         
-    def Add(self, product):
+    def add(self, product):
         
         if str(product.id) not in self.cart.keys():
             self.carro[product.id] = {
