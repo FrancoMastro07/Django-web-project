@@ -2,27 +2,27 @@ from django.shortcuts import redirect
 from .cart import Cart
 from store.models import Product
 
-def add(request, product_id):
+def add_product(request, product_id):
     cart = Cart(request)
     product = Product.objects.get(id=product_id)
     cart.add(product=product)
-    return redirect("store")
+    return redirect("Store")
 
-def delete(request, product_id):
+def delete_product(request, product_id):
     cart = Cart(request)
     product = Product.objects.get(id=product_id)
     cart.delete(product=product)
-    return redirect("store")
+    return redirect("Store")
 
 def subtract_product(request, product_id):
     cart = Cart(request)
     product = Product.objects.get(id=product_id)
-    cart.subtract_product(product=product)
-    return redirect("store")
+    cart.subtract(product=product)
+    return redirect("Store")
 
 def cart_clean(request):
     cart = Cart(request)
-    cart.subtract_product()
-    return redirect("store")
+    cart.clean()
+    return redirect("Store")
 
 
