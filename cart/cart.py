@@ -28,6 +28,7 @@ class Cart:
             for key, value in self.cart.items():
                 if key == str(product.id):
                     value["amount"] += 1
+                    value["price"] = float(value["price"]) + product.price
                     break
         self.save_cart()
         
@@ -42,6 +43,7 @@ class Cart:
         for key, value in self.cart.items():
             if key == str(product.id):
                 value["amount"] -= 1
+                value["price"] = float(value["price"]) - product.price
                 if value["amount"] < 1:
                     self.delete(product)
                 break

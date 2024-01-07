@@ -22,7 +22,10 @@
                     <td>{{value.amount}}</td>
                     <td>
                         <a href="{% url 'cart:add' value.product_id %}" class="btn btn-sm btn-success">+</a>
-                        <a href="{% url 'cart:subtract' value.product_id %}" class="btn btn-sm btn-success">-</a>
+                        <a href="{% url 'cart:subtract' value.product_id %}" class="btn btn-sm btn-success">-</a><br/>
+
+                        {{value.price}} $
+
                     </td>
                 </tr>
 
