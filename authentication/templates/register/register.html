@@ -2,15 +2,21 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
-<form method="POST" action="" style="color: white;">
+<form method="post" action="" style="color: white;">
 
     {% csrf_token %}
 
-    {{form}}
+    <div style="width: 75%; margin: auto;">
 
-    <button type="submit" class="btn btn-success">Sign up</button>
+        {{form|crispy}}
+
+        <button type="submit" class="btn btn-success">Sign up</button>
+
+    </div>
 
 </form>
 

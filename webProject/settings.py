@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'store',
     'cart',
     'authentication',
+    'crispy_forms',
+    'crispy_bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -103,3 +105,6 @@ EMAIL_HOST = "smtp.email.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "webprojectdjango@gmail.com"
 EMAIL_HOST_PASSWORD = ""  
+
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
