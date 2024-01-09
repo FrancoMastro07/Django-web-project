@@ -4,6 +4,14 @@
 
 {% block content %}
 
+<form method="POST" action="" style="color: white;">
 
+    {% csrf_token %}
+
+    {{form}}
+
+    <button type="submit" class="btn btn-success">Sign up</button>
+
+</form>
 
 {% endblock %}
