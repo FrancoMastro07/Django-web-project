@@ -7,7 +7,15 @@
 <div class="container">
     <div style="float: right;">
 
-        {% include 'cart/widget.html' %}
+        {% if request.user.is_authenticated %}
+
+            {% include 'cart/widget.html' %}
+
+        {% else %}
+
+            <div class="alert alert-danger text-center">No user logged</div>
+
+        {% endif %}
 
     </div>
     <div class="row">
