@@ -21,7 +21,6 @@
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-lower">Order management</span>
     </h1>
-
     <div style="text-align: right; margin-right: 100px; color: white;">
 
       {% if user.is_authenticated %}
@@ -30,7 +29,7 @@
         
       {% else %}
 
-        <a href="#" style="color: white;">Log in</a> &nbsp; &nbsp; <a href="{% url 'Authentication' %}" style="color: white;">Sign up</a>
+        <a href="{% url 'Login' %}" style="color: white;">Log in</a> &nbsp; &nbsp; <a href="{% url 'Authentication' %}" style="color: white;">Sign up</a>
 
       {% endif %}
 
