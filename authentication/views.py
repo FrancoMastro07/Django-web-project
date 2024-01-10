@@ -40,5 +40,9 @@ def log_in(request):
             if user is not None:
                 login(request, user)
                 return redirect('Home')
+            else:
+                messages.error(request, "Invalid user")
+        else:
+            messages.error(request, "Incorrect information")
     form = AuthenticationForm()
     return render(request, "login/login.html", {"form":form})
