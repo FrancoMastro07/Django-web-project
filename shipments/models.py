@@ -29,13 +29,13 @@ class Shipment(models.Model):
 class ShipmentLine(models.Model):
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
-    shipment_id = models.ForeignKey(Shipment, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    shipment = models.ForeignKey(Shipment, on_delete=models.CASCADE)
     amount = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __star__(self):
-        return f'{self.amount} of {self.product_id.name}'
+        return f'{self.amount} of {self.product.name}'
     
     class Meta:
         
