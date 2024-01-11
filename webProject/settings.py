@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     'cart',
     'authentication',
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+    'shipments',
 ]
 
 MIDDLEWARE = [
